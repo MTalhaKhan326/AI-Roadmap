@@ -2,15 +2,15 @@ import numpy as np
 import time
 
 # 1. Setup: Goal is 20, Input is 10
-x = 10.0          # Input
-target = 20.0     # The "Truth" (Goal)
-weight = 0.5      # Starting with a random "bad" weight
+x = 6.0          # Input
+target = 17.0     # The "Truth" (Goal)
+weight = 0.2      # Starting with a random "bad" weight
 learning_rate = 0.001
 
 print(f"Starting Training... Target: {target}\n")
 
 # 2. The Training Loop (Forward + Backward)
-for epoch in range(50):
+for epoch in range(70):
     # --- FORWARD PASS ---
     prediction = x * weight
     
