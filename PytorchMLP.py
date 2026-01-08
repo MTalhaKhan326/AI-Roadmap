@@ -34,11 +34,11 @@ class MLPModel(nn.Module):
 
 model = MLPModel()
 criterion = nn.MSELoss() 
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+optimizer = optim.Adam(model.parameters(), lr=0.01)
 
 # 4. THE VERBOSE TRAINING LOOP
 print("--- Starting Training (Verbose Mode) ---")
-epochs = 40000
+epochs = 20000
 for epoch in range(epochs):
     # Forward Pass
     predictions = model(X_train)
