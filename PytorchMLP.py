@@ -7,9 +7,9 @@ from sklearn.model_selection import train_test_split
 
 # 1. THE DATA
 X_raw = torch.tensor([[20], [25], [30], [35], [40], [45], [50], [55], [60], [65], [70], [75], [77], [79], [81], [84], [87], [90]], dtype=torch.float32)
-y_raw = torch.tensor([[95], [92], [88], [85], [80], [78], [57], [65], [60], [55], [50], [45], [56], [52], [63], [54], [47], [39]], dtype=torch.float32)
+y_raw = torch.tensor([[95], [92], [88], [85], [80], [78], [59], [65], [60], [57], [50], [45], [56], [52], [63], [54], [47], [39]], dtype=torch.float32)
 # 2. THE SPLIT (80% Train, 20% Test)
-X_train_np, X_test_np, y_train_np, y_test_np = train_test_split(X_raw.numpy(), y_raw.numpy(), test_size=0.2, random_state=42)
+X_train_np, X_test_np, y_train_np, y_test_np = train_test_split(X_raw.numpy(), y_raw.numpy(), test_size=0.3, random_state=42)
 
 # Convert back to Tensors one last time (Clean and safe)
 X_train = torch.tensor(X_train_np)
@@ -38,7 +38,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.01)
 
 # 4. THE VERBOSE TRAINING LOOP
 print("--- Starting Training (Verbose Mode) ---")
-epochs = 20000
+epochs = 12000
 for epoch in range(epochs):
     # Forward Pass
     predictions = model(X_train)
