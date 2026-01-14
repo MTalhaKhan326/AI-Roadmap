@@ -93,4 +93,4 @@ def predict_local_image(image_path, model):
         print(f"Error: The file '{image_path}' was not found.")
 
 # --- RUN PREDICTION ---
-predict_local_image('horse.jpg', model)
+predict_local_image('cat.jpg', model)
