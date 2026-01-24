@@ -5,7 +5,7 @@ import spacy
 # Load the model
 nlp = spacy.load("en_core_web_md")
 
-text = "Apple is looking at buying a startup in the United Kingdom for $1 billion."
+text = "this guy is working i Audi. He is AI engineer. His name is Talha and he was very passionate his monthly salary is 20,000 euro"
 
 doc = nlp(text)
 
